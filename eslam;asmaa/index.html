@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إسلام و أسماء | دعوة زفاف ملكية</title>
+<link rel="icon" type="image/png" href="logo.png">
+<meta name="description" content="دعوة زفاف إسلام وأسماء — الثلاثاء ١٥ سبتمبر ٢٠٢٦، أركان - نادي الصفوة - بالعاشر من رمضان">
+<meta property="og:title" content="إسلام و أسماء | دعوة زفاف ملكية">
+<meta property="og:description" content="دعوة زفاف إسلام وأسماء — الثلاثاء ١٥ سبتمبر ٢٠٢٦، أركان - نادي الصفوة - بالعاشر من رمضان">
+<meta property="og:image" content="p.png">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== PRELOADER ===== -->
+<div id="preloader">
+  <div style="position:relative;display:flex;align-items:center;justify-content:center;width:90px;height:90px;">
+    <div class="pre-ring"></div>
+    <div class="pre-initials">إ & أ</div>
+  </div>
+  <p class="pre-text">تحضير الدعوة</p>
+  <div class="pre-bar-wrap"><div class="pre-bar"></div></div>
+</div>
+
+<!-- ===== AMBIENT CANVAS ===== -->
+<canvas id="ambient-canvas"></canvas>
+
+<!-- ===== PETALS ===== -->
+<div id="petal-field"></div>
+
+<!-- ===== MUSIC ===== -->
+<audio id="bg-music" loop preload="none">
+  <source src="music.mp4" type="video/mp4">
+</audio>
+<button id="music-btn" title="تشغيل الموسيقى">♪</button>
+
+<!-- ===== ENVELOPE ===== -->
+<div id="envelope-screen">
+  <!-- star field -->
+  <div class="env-bg-stars" id="starField"></div>
+
+  <p class="env-top-line">بسم الله الرحمن الرحيم</p>
+
+  <div class="envelope-wrap" id="envelopeWrap">
+    <div class="env-shadow"></div>
+    <div class="env-body">
+      <div class="env-liner"></div>
+      <div class="env-inner-deco"></div>
+      <div class="env-initials">
+        <span class="ei-big">إ &amp; أ</span>
+        <span class="ei-small">إسلام و أسماء</span>
+      </div>
+      <div class="env-glow"></div>
+    </div>
+    <div class="env-gate-l"></div>
+    <div class="env-gate-r"></div>
+    <div class="env-flap">
+      <div class="env-seal">❦</div>
+    </div>
+    <div class="env-hint">اضغط لفتح الدعوة</div>
+  </div>
+</div>
+
+<!-- ===== MAIN SITE ===== -->
+<div id="site">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-geo">
+      <div class="geo-circle geo-c1"></div>
+      <div class="geo-circle geo-c2"></div>
+      <div class="geo-circle geo-c3"></div>
+      <div class="geo-circle geo-c4"></div>
+    </div>
+    <div class="hero-corner tl"></div>
+    <div class="hero-corner br"></div>
+    <div class="hero-corner tr"></div>
+    <div class="hero-corner bl"></div>
+
+    <p class="bismillah">بسم الله الرحمن الرحيم</p>
+    <p class="hero-eyebrow">دعوة زفاف ملكية</p>
+    <h1 class="names" id="namesTitle"></h1>
+    <p class="hero-sub">بقلوب مليانة فرحة وحب، يسعدنا نشاركوكم أجمل لحظة في حياتنا — وليكون فرحنا أجمل بوجودكم معانا.</p>
+    <div class="hero-date-wrap">
+      <div class="hero-date-line"></div>
+      <div class="hero-date">الثلاثاء، ١٥ سبتمبر ٢٠٢٦</div>
+      <div class="hero-date-line"></div>
+    </div>
+    <div class="scroll-cue">
+      <div class="cue-bar"></div>
+      انزل تحت
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="divider reveal-el">
+    <svg class="line-svg" viewBox="0 0 90 12"><path d="M0,6 Q22,1 45,6 Q68,11 90,6"/></svg>
+    <span class="mark">❦</span>
+    <svg class="line-svg" viewBox="0 0 90 12"><path d="M0,6 Q22,11 45,6 Q68,1 90,6"/></svg>
+  </div>
+
+  <!-- QURAN SECTION -->
+  <section class="quran-section">
+    <div class="container">
+      <div class="quran-box reveal-el">
+        <h2 class="quran-text">"وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً"</h2>
+        <p class="quran-ref">— سورة الروم: ٢١ —</p>
+        <div class="quran-duaa">بارك الله لكما وبارك عليكما وجمع بينكما في خير</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="divider reveal-el">
+    <svg class="line-svg" viewBox="0 0 90 12"><path d="M0,6 Q22,1 45,6 Q68,11 90,6"/></svg>
+    <span class="mark">❦</span>
+    <svg class="line-svg" viewBox="0 0 90 12"><path d="M0,6 Q22,11 45,6 Q68,1 90,6"/></svg>
+  </div>
+
+  <!-- PHOTO SECTION — moved to top for maximum impact -->
+  <section class="photo-section">
+    <div class="container">
+      <p class="section-kicker reveal-el">لحظتنا</p>
+      <h2 class="section-title reveal-el">إسلام و أسماء</h2>
+      <div class="photo-outer">
+        <div class="photo-tilt-wrap reveal-el">
+          <div class="photo-frame-3d" id="photo3d">
+            <div class="photo-glow"></div>
+            <div class="photo-particles" id="photoParticles"></div>
+            <div class="photo-ring"></div>
+            <div class="photo-ring-2"></div>
+            <div class="photo-card" id="photoCard">
+              <img src="p.png" alt="إسلام وأسماء" onerror="this.style.display='none';document.getElementById('photoPlaceholder').style.display='flex'">
+              <div class="photo-placeholder" id="photoPlaceholder" style="display:none">
+                <span>إ &amp; أ</span>
+                <span>صورتكم هنا</span>
+              </div>
+              <div class="cb cb-tl"></div>
+              <div class="cb cb-tr"></div>
+              <div class="cb cb-bl"></div>
+              <div class="cb cb-br"></div>
+              <div class="photo-shine" id="photoShine"></div>
+              <div class="photo-sweep"></div>
+            </div>
+          </div>
+        </div>
+        <p class="photo-caption reveal-el">معكم يكتمل الفرح ويحلى المقام</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="divider reveal-el">
+    <svg class="line-svg" viewBox="0 0 90 12"><path d="M0,6 Q22,1 45,6 Q68,11 90,6"/></svg>
+    <span class="mark">❦</span>
+    <svg class="line-svg" viewBox="0 0 90 12"><path d="M0,6 Q22,11 45,6 Q68,1 90,6"/></svg>
+  </div>
+
+  <!-- STORY -->
+  <section class="story">
+    <div class="container">
+      <p class="section-kicker reveal-el">حكايتنا</p>
+      <h2 class="section-title reveal-el">من أول لقاء لحد يوم العمر</h2>
+      <div class="story-line" id="storyLine">
+        <div class="story-item">
+          <div class="story-icon">✨</div>
+          <div class="story-year">البداية</div>
+          <div class="story-title">أول مقابلة - تقريباً 29/5</div>
+          <div class="story-text">حكاية بسيطة بدأت بصدفة جمعت بينا، وكانت أول خطوة في طريق طويل مليان بالحب والدفا.</div>
+        </div>
+        <div class="story-item">
+          <div class="story-icon">💍</div>
+          <div class="story-year">خطوة</div>
+          <div class="story-title">الخطوبة - 18/7/2025</div>
+          <div class="story-text">اتفقنا نكمل بعض، وبدأنا نجهز لأجمل رحلة في حياتنا مع دعم أهلنا وأحبابنا.</div>
+        </div>
+        <div class="story-item">
+          <div class="story-icon">🌹</div>
+          <div class="story-year">الفرح</div>
+          <div class="story-title">يوم العمر - 15/9/2026</div>
+          <div class="story-text">وأخيرًا وصلنا لليوم اللي بيجمعنا فيه كل اللي بنحبهم عشان نبدأ حياتنا الجديدة مع بعض.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="divider reveal-el">
+    <svg class="line-svg" viewBox="0 0 90 12"><path d="M0,6 Q22,1 45,6 Q68,11 90,6"/></svg>
+    <span class="mark">❦</span>
+    <svg class="line-svg" viewBox="0 0 90 12"><path d="M0,6 Q22,11 45,6 Q68,1 90,6"/></svg>
+  </div>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-section">
+    <div class="container">
+      <p class="section-kicker reveal-el">لسه باقي</p>
+      <h2 class="section-title reveal-el">العد التنازلي لليوم الكبير</h2>
+      <div class="countdown-grid reveal-el">
+        <div class="cd-item">
+          <div class="cd-box">
+            <div class="cd-num" id="cd-days">00</div>
+            <div class="cd-label">يوم</div>
+          </div>
+        </div>
+        <div class="cd-separator">:</div>
+        <div class="cd-item">
+          <div class="cd-box">
+            <div class="cd-num" id="cd-hours">00</div>
+            <div class="cd-label">ساعة</div>
+          </div>
+        </div>
+        <div class="cd-separator">:</div>
+        <div class="cd-item">
+          <div class="cd-box">
+            <div class="cd-num" id="cd-mins">00</div>
+            <div class="cd-label">دقيقة</div>
+          </div>
+        </div>
+        <div class="cd-separator">:</div>
+        <div class="cd-item">
+          <div class="cd-box">
+            <div class="cd-num" id="cd-secs">00</div>
+            <div class="cd-label">ثانية</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="divider reveal-el" style="background:var(--paper);margin:0;padding:28px 0;">
+    <svg class="line-svg" viewBox="0 0 90 12"><path d="M0,6 Q22,1 45,6 Q68,11 90,6"/></svg>
+    <span class="mark">❦</span>
+    <svg class="line-svg" viewBox="0 0 90 12"><path d="M0,6 Q22,11 45,6 Q68,1 90,6"/></svg>
+  </div>
+
+  <!-- DETAILS -->
+  <section class="details-section">
+    <div class="container">
+      <p class="section-kicker reveal-el">تفاصيل الفرح</p>
+      <h2 class="section-title reveal-el">هنستناكم فين وإمتى</h2>
+      <div style="height:36px"></div>
+
+      <div class="detail-card reveal-el">
+        <div class="detail-icon">🌿</div>
+        <div>
+          <div class="detail-title">ليلة الحنة</div>
+          <div class="detail-text">الاثنين ١٤ سبتمبر ٢٠٢٦<br>ليلة الفرحة والحنة — قبل يوم العمر</div>
+        </div>
+      </div>
+
+      <div class="detail-card reveal-el">
+        <div class="detail-icon">🗓</div>
+        <div>
+          <div class="detail-title">يوم الفرح</div>
+          <div class="detail-text">الثلاثاء ١٥ سبتمبر ٢٠٢٦<br>حفل الاستقبال الساعة ٨ مساءً</div>
+        </div>
+      </div>
+
+      <div class="detail-card reveal-el">
+        <div class="detail-icon">📍</div>
+        <div style="width:100%">
+          <div class="detail-title">المكان</div>
+          <div class="detail-text">أركان - نادي الصفوة - بالعاشر من رمضان</div>
+          <div class="map-wrap">
+            <iframe
+              src="https://maps.google.com/maps?q=نادي الصفوة العاشر من رمضان&z=15&output=embed"
+              loading="lazy"
+              allowfullscreen
+              title="خريطة نادي الصفوة"
+            ></iframe>
+          </div>
+          <a class="map-open-btn" href="https://maps.app.goo.gl/iMbinhGMWuYCJCxt6" target="_blank" rel="noopener">
+            🗺 افتح في خرائط جوجل
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- THANK YOU SECTION -->
+  <section class="thank-you-section">
+    <div class="container">
+      <div class="thank-you-card reveal-el">
+        <div class="thank-you-icon">💌</div>
+        <h2 class="thank-you-title">رسالة من القلب</h2>
+        <p class="thank-you-text">لكل غالي بياخد من وقته عشان يشاركنا فرحتنا، حضوركم هو أكبر هدية لينا. وجودكم هيكمل فرحة اليوم ده وهيفضل ذكرى حلوة في قلوبنا طول العمر. شرفتونا ونورتونا، ونتمنى لكم يوم جميل مليان حب وسعادة.</p>
+        <p class="thank-you-sign">مع خالص الحب،<br>إسلام وأسماء</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="container">
+      <div class="divider reveal-el">
+        <svg class="line-svg" viewBox="0 0 90 12"><path d="M0,6 Q22,1 45,6 Q68,11 90,6"/></svg>
+        <span class="mark">❦</span>
+        <svg class="line-svg" viewBox="0 0 90 12"><path d="M0,6 Q22,11 45,6 Q68,1 90,6"/></svg>
+      </div>
+      <p class="closing-verse reveal-el" style="font-size:24px; font-family:'Aref Ruqaa',serif; color:var(--gold);">
+        "بارك الله لكما وبارك عليكما وجمع بينكما في خير"
+      </p>
+      <p class="closing-names reveal-el">بحضوركم تكتمل فرحتنا</p>
+      <p class="closing-invite reveal-el">ننتظركم بشوق</p>
+      <p class="footer-note reveal-el">إسلام &amp; أسماء · ١٥ سبتمبر ٢٠٢٦</p>
+      <div class="footer-social reveal-el">
+        <a href="https://www.instagram.com/the.khafagy/" target="_blank" rel="noopener" class="social-icon" title="تابعنا على انستغرام">
+          <svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end #site -->
+
+<script src="script.js"></script>
+</body>
+</html>
+
